@@ -3,6 +3,10 @@
 // This code is contributed
 // by Gatea David
 
+BigInt::BigInt(const BigInt& other) {
+	digits = other.digits;
+}
+
 BigInt::BigInt(string& s) {
 	digits = "";
 	int n = s.size();
@@ -30,6 +34,7 @@ BigInt::BigInt(const char* s) {
 BigInt::BigInt(BigInt& a) {
 	digits = a.digits;
 }
+
 
 bool Null(const BigInt& a) {
 	if (a.digits.size() == 1 && a.digits[0] == 0)

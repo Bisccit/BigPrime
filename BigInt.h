@@ -29,6 +29,8 @@ public:
 //Direct assignment
 	BigInt& operator=(const BigInt&);
 
+	BigInt(const BigInt&);
+
 	//Post/Pre - Incrementation
 	BigInt& operator++();
 	BigInt operator++(int temp);

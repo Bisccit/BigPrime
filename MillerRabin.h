@@ -1,6 +1,7 @@
 #pragma once
 
 #include "BigInt.h";
+#include <math.h>
 
 class MillerRabin
 {
@@ -16,6 +17,6 @@ public:
 
 	bool trialComposite(BigInt roundTester, BigInt evenComponent, BigInt prime, BigInt maxDivisionsByTwo);
 
-	bool powMod(BigInt b, BigInt e, BigInt m);
+	BigInt powMod(BigInt b, BigInt e, BigInt m);
 };
 
