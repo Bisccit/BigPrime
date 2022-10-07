@@ -1,10 +1,17 @@
 #include "MillerRabin.h"
 
+MillerRabin::MillerRabin(unsigned int n) {
+    numTrials = n;
+}
+
 bool MillerRabin::isValid(BigInt prime) {
 	BigInt maxDivisionsByTwo(2);
 	BigInt evenComponent(prime - BigInt(1));
 
+    //cout << evenComponent << endl;
+
 	while (evenComponent % BigInt(2) == BigInt()) {
+        
 		evenComponent /= BigInt(2); // substitution for >>= 1, i assumed that comes down to the same thing
 		maxDivisionsByTwo += BigInt(1);
 	}

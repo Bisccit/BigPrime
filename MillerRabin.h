@@ -9,9 +9,7 @@ private:
 	int numTrials;
 
 public:
-	MillerRabin();
-
-	~MillerRabin();
+	MillerRabin(unsigned int n = 20);
 
 	bool isValid(BigInt prime);
 

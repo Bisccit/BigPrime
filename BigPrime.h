@@ -11,16 +11,14 @@ private:
 	int maxTries;
 
 public:
-	BigPrime(int maxTries) {
-		this->maxTries = maxTries;
-	}
+	BigPrime(int n = 1000);
 
-	BigInt generatePrime(int n);
+	BigInt generatePrime(int);
 
-	BigInt generateSafePrime(int n);
+	BigInt generateSafePrime(int);
 
-	BigInt generateSignaturePrimePair(int N, int L);
+	BigInt generateSignaturePrimePair(int, int);
 
-	bool isPrime(BigInt prime);
+	bool isPrime(BigInt);
 };
 

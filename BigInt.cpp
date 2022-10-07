@@ -2,6 +2,7 @@
 
 // This code is contributed
 // by Gatea David
+// Edited by Bisccit
 
 BigInt::BigInt(const BigInt& other) {
 	digits = other.digits;
@@ -266,7 +267,7 @@ BigInt& operator%=(BigInt& a, const BigInt& b) {
 	a = t;
 	return a;
 }
-BigInt operator%(const BigInt& a, BigInt& b) {
+BigInt operator%(const BigInt& a, const BigInt& b) {
 	BigInt temp;
 	temp = a;
 	temp %= b;

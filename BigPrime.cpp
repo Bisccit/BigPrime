@@ -1,15 +1,20 @@
 #include "BigPrime.h"
 
+BigPrime::BigPrime(int n) {
+	maxTries = n;
+}
+
 BigInt BigPrime::generatePrime(int n) {
 	BigInt res(-1);
 	int x = 0;
+
 	while (x < maxTries) {
 		x++;
+
 		BigInt max((long)0);
 		BigInt min((long)0);
 		BigInt primeCandidate(long(0));
 		BigInt hundred(100);
-		
 
 		max = (BigInt(2) ^ BigInt(n)) - BigInt(1);
 		min = (BigInt(2) ^ BigInt(n-1)) + BigInt(1);
@@ -54,9 +59,9 @@ bool BigPrime::isPrime(BigInt prime) {
 	}
 
 	// miller rabin
-	MillerRabin* millerRabin = new MillerRabin();
+	MillerRabin millerRabin(20);
 
-	if (!millerRabin->isValid(prime)) {
+	if (!millerRabin.isValid(prime)) {
 		return false;
 	}
 

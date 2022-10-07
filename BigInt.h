@@ -2,6 +2,7 @@
 
 // This code is contributed
 // by Gatea David
+// Edited by Bisccit
 
 #include <iostream>
 #include <vector>
@@ -17,6 +18,7 @@ public:
 	BigInt(string&);
 	BigInt(const char*);
 	BigInt(BigInt&);
+	BigInt(const BigInt&);
 
 	//Helper Functions:
 	friend void divide_by_2(BigInt& a);
@@ -29,7 +31,7 @@ public:
 //Direct assignment
 	BigInt& operator=(const BigInt&);
 
-	BigInt(const BigInt&);
+	
 
 	//Post/Pre - Incrementation
 	BigInt& operator++();
